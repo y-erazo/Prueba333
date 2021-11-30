@@ -222,10 +222,10 @@ nav ul li a{
             margin-bottom: 45%;
         }
         .footer-socialMedia a, .nav-footer a, .nav-footer-info a{
-            list-style: none;
             color: #FFFFFF;
         }
         .footer-socialMedia ul{
+            list-style: none;
             display: flex;
             justify-content: space-between;
         }
