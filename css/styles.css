@@ -63,7 +63,6 @@ nav ul li a{
     box-shadow: 0px 4px 8px rgba(59, 71, 243, 0.5);
     animation-name: scale;
     animation-duration: 0.5s;
-
 }
 
 /* ------ Manage Header ------*/
@@ -76,6 +75,17 @@ nav ul li a{
 }
         #icon-menu{
             display: none;
+        }
+        .nav-header a{
+            background-size: 0% 2px
+        }
+
+        .nav-header a:hover {
+            background-image: linear-gradient(#F3603B, #F3603B);
+            background-repeat: no-repeat;
+            background-position: 100% 0%;
+            background-size: 100% 2px;
+            transition: 0.5s;
         }
 
 /* ------ Product Description ------*/
@@ -463,6 +473,8 @@ nav ul li a{
             #form-suscription{
                 width: 100%;
                 order: 3;
+            }
+            #form-suscription input{
             }
             /* Navegation info */
             .footer-navegation{
