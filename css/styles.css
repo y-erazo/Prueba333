@@ -7,7 +7,27 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+        /* Animaciones */
+                        @keyframes rotation {
+                            0%{
+                                transform: rotate(0deg);
+                            }
+                            100%{
+                                transform: rotate(180deg);
+                            }
+                        }
 
+                        @keyframes scale {
+                            0% {
+                                transform: scale();
+                            }
+                            50% {
+                                transform: scale(0.9);
+                            }
+                            100% {
+                                transform: scale(1);
+                            }
+                        }
 
 /* ------ generales ------ */
 .content-header, .main, .aside-contain, .feedback, .footer-contain{
@@ -35,11 +55,15 @@ nav ul li a{
     color: #FFFFFF;
     padding: 12.5px 30.5px;
     box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
+    cursor: pointer;
 }
 
 .btn:hover{
     background: #242E52;
     box-shadow: 0px 4px 8px rgba(59, 71, 243, 0.5);
+    animation-name: scale;
+    animation-duration: 0.5s;
+
 }
 
 /* ------ Manage Header ------*/
@@ -161,7 +185,7 @@ nav ul li a{
         }
         .feedback-item p{
             margin: 21px 21px 38px;
-            color: #B9B9C1;
+            color: #686868;
             line-height: 157%;
         }
         .dots{
@@ -269,7 +293,12 @@ nav ul li a{
 
 @media (max-width: 1024px){
 
-
+    body{
+        background-image: url('../img/bg-tablet-pattern.svg');
+        background-repeat: no-repeat;
+        background-position-x: 50px;
+        background-position-y: -380px;
+    }
     .content-header, .main, .aside-contain, .feedback, .footer-contain{
         width: 85%;
     }
@@ -284,10 +313,14 @@ nav ul li a{
         display: block;
         font-size: 30px;
         cursor: pointer;
+        transition: all 1s;
     }
-    #icon-menu:active {
+
+    #icon-menu:hover {
         content: url(../img/icon-close.svg);
         width: 29px;
+        animation-name: rotation;
+        animation-duration: 1s;
     }
 
 
@@ -295,7 +328,7 @@ nav ul li a{
     .productDescription{
         flex-direction: column-reverse;
         align-items: center;  
-        text-align: center;      
+        text-align: center;
     }
             .productDescription-text{
                 width: 100%;
@@ -391,7 +424,12 @@ nav ul li a{
             }
 
 /* ------ aside ------*/
-
+    
+.aside{
+    background-image: url('../img/bg-simplify-section-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
     .aside-contain{
         justify-content: center;
         text-align: center;
