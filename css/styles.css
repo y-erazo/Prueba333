@@ -150,6 +150,7 @@ nav ul li a{
         .feedback-cards{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
         .feedback h2{
             color:#242E53;
@@ -296,12 +297,11 @@ nav ul li a{
         }
 
 /* **************************************** Laptop ****************************************/
-@media (min-width: 1024px) and (max-width: 1280px){
-    .content-header, .main, .aside-contain, .feedback, .footer-contain, .footer-content p{
-        width: 90%;
-    }
-}
-
+        @media (min-width: 1024px) and (max-width: 1280px){
+            .content-header, .main, .aside-contain, .feedback, .footer-contain, .footer-content p{
+                width: 90%;
+            }
+        }
 
 /* **************************************** Tablet ****************************************/
 /* **************************************** Ipad 768 x 1024 ****************************************/
@@ -360,7 +360,7 @@ nav ul li a{
             }
             
             .productDescription-img{
-                width: 100%;
+                width: 85%;
             }
 
 /* ------ Features ------*/
@@ -483,7 +483,8 @@ nav ul li a{
                 width: 100%;
                 order: 3;
             }
-
+            #form-suscription input{
+            }
             /* Navegation info */
             .footer-navegation{
                 width: 100%;
