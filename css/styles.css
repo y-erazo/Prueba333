@@ -295,10 +295,19 @@ nav ul li a{
             color: #8C8C94;
         }
 
+/* **************************************** Laptop ****************************************/
+@media (max-width: 1280px){
+    .content-header, .main, .aside-contain, .feedback, .footer-contain, .footer-content p{
+        width: 85%;
+    }
+
+}
+
+
 /* **************************************** Tablet ****************************************/
 /* **************************************** Ipad 768 x 1024 ****************************************/
 
-@media (max-width: 1080px){
+@media (max-width: 1024px){
 
     body{
         background-image: url('../img/bg-tablet-pattern.svg');
