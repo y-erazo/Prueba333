@@ -298,9 +298,8 @@ nav ul li a{
 /* **************************************** Laptop ****************************************/
 @media (max-width: 1280px){
     .content-header, .main, .aside-contain, .feedback, .footer-contain, .footer-content p{
-        width: 85%;
+        width: 90%;
     }
-
 }
 
 
