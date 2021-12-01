@@ -7,30 +7,9 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
-        /* Animaciones */
-                        @keyframes rotation {
-                            0%{
-                                transform: rotate(0deg);
-                            }
-                            100%{
-                                transform: rotate(180deg);
-                            }
-                        }
-
-                        @keyframes scale {
-                            0% {
-                                transform: scale();
-                            }
-                            50% {
-                                transform: scale(0.9);
-                            }
-                            100% {
-                                transform: scale(1);
-                            }
-                        }
-
+       
 /* ------ generales ------ */
-.content-header, .main, .aside-contain, .feedback, .footer-contain{
+.content-header, .main, .aside-contain, .feedback, .footer-contain, .footer-content p{
     width: 1280px;
     margin: auto;
 }
@@ -47,6 +26,17 @@ nav ul li a{
     text-decoration: none;
     color: #242E52;
 }
+    /* ------ Animation linea footer link ------*/
+    .nav a {
+        background-size: 0% 2px;
+    }
+    .nav a:hover {
+        background-image: linear-gradient(#F3603B, #F3603B);
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+        background-size: 100% 3px;
+        transition: 0.5s;
+    }
 
 .btn{
     border: none;
@@ -77,17 +67,8 @@ nav ul li a{
             display: none;
         }
         .nav-header a{
-            background-size: 0% 2px
+            font-weight: 500;
         }
-
-        .nav-header a:hover {
-            background-image: linear-gradient(#F3603B, #F3603B);
-            background-repeat: no-repeat;
-            background-position: 100% 0%;
-            background-size: 100% 2px;
-            transition: 0.5s;
-        }
-
 /* ------ Product Description ------*/
 .productDescription{
     display: flex;
@@ -142,7 +123,6 @@ nav ul li a{
             color: #323851;
             margin-bottom: 18px;
             font-size: 16px;
-
         }
 
         .features-items-content h4 span{
@@ -154,7 +134,7 @@ nav ul li a{
         }
 
         .features-items-content p{
-            color: #B3B2B7;
+            color: #616161;
             line-height: 26px;
             margin-left: 90px;
         }
@@ -195,7 +175,7 @@ nav ul li a{
         }
         .feedback-item p{
             margin: 21px 21px 38px;
-            color: #686868;
+            color: #616161;
             line-height: 157%;
         }
         .dots{
@@ -236,22 +216,34 @@ nav ul li a{
     color: #FFFFFF;
     padding: 67px 0;
 }
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+}
+.footer-content p{
+    text-align: right;
+} 
+
         .footer-contain{
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        .footer-contain .contain:nth-child(3){
+            align-self: flex-start;
+        }
         .nav-footer ul, .nav-footer-info ul{
             flex-direction: column;
             line-height: 35px;
         }
-
         .footer-navegation{
+            width: 33.3%;
             display: flex;
             align-items: flex-start;
+            justify-content: space-between;
         }
-
+        
         .footer-logo{
             margin-bottom: 45%;
         }
@@ -270,9 +262,8 @@ nav ul li a{
         .footer-socialMedia ul li i:hover{
             color: #F3613C;
         }
-
         #form-suscription{
-            width: 500px;
+            width: 33.3%;
             display: flex;
             justify-content: center;
         }
@@ -284,6 +275,11 @@ nav ul li a{
             border: none;
             margin-right: 10px;
         }
+        #form-suscription input::placeholder {
+            color:#242E53;
+            padding-left: 10px;
+        }
+
         .btn-suscription{
             box-shadow: none;
         }
@@ -300,6 +296,7 @@ nav ul li a{
         }
 
 /* **************************************** Tablet ****************************************/
+/* **************************************** Ipad 768 x 1024 ****************************************/
 
 @media (max-width: 1024px){
 
@@ -309,29 +306,29 @@ nav ul li a{
         background-position-x: 50px;
         background-position-y: -380px;
     }
-    .content-header, .main, .aside-contain, .feedback, .footer-contain{
+    .content-header, .main, .aside-contain, .feedback, .footer-contain, .footer-content p{
         width: 85%;
     }
 
-    .nav-header{
-        display: none;
-    }
-    .btn-header{
-        display: none;
-    }
-    #icon-menu{
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        transition: all 1s;
-    }
+        .nav-header{
+            display: none;
+        }
+        .btn-header{
+            display: none;
+        }
+        #icon-menu{
+            display: block;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 1s;
+        }
 
-    #icon-menu:hover {
-        content: url(../img/icon-close.svg);
-        width: 29px;
-        animation-name: rotation;
-        animation-duration: 1s;
-    }
+        #icon-menu:hover {
+            content: url(../img/icon-close.svg);
+            width: 29px;
+            animation-name: rotation;
+            animation-duration: 1s;
+        }
 
 
 /* ------ Product Description ------*/
@@ -349,7 +346,7 @@ nav ul li a{
 
             .productDescription p, .features-description p{
                 width: 85%;
-                color: #B3B2B7;
+                color:#616161;
                 margin: 0 auto;
                 margin-bottom: 28px;
             }
@@ -446,9 +443,13 @@ nav ul li a{
 }
             .aside-contain h3{
                 margin-bottom: 20px;
-            }
+                }
 
     /* ------ Footer ------*/
+    .footer-content p{
+        text-align: center;
+        margin-top: 50px;
+    }
     .footer-contain {
         width: 90%;
         flex-direction: column-reverse;
@@ -489,7 +490,8 @@ nav ul li a{
             }
 }
 
-/* **************************************** Mobile ****************************************/
+/* *********************************************+  Mobile ****************************************/
+        /* **************************************** Iphone 8, 7, 6S, 6****************************************/
 
 @media (max-width: 375px){
     body{
@@ -502,4 +504,71 @@ nav ul li a{
     .features-items-content h4{
         font-size: 13px;
     }
+    .aside h3{
+        font-size: 35px;
+        margin-right: 0px;
+    }
 }
+
+        /* **************************************** Iphone 5/SE ****************************************/
+        @media (max-width: 320px){
+
+            .content-header, .main, .aside-contain, .feedback, .footer-contain{
+                width: 92%;
+            }
+
+            .productDescription h1{
+                font-size: 30px;
+            }
+
+        /* ------ Features ------*/
+            .features-description h3{
+                font-size: 28px;
+            }
+
+                    .features-items-content h4{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 13px;
+                        border-radius: 15px;
+                        padding: 25px 0 10px 0 ;
+                    }
+                    .features-items-content span{
+                        position: absolute;
+                        margin-top: -40px;
+                    }
+                    .features-items-content p{
+                        text-align: center;
+                        line-height: 24px;
+
+                    }
+                    /* .aside h3{
+                        font-size: 30px;
+                        margin-right: 0px;
+                    } */
+            
+        }
+
+
+/*------------------------------------------- Animaciones --------------------------- */
+        @keyframes rotation {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(180deg);
+            }
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale();
+            }
+            50% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
